@@ -1,19 +1,20 @@
 const express = require('express');
 const postData = require('./mock/posts.json')
+require('dotenv').config()
 
 const app = express();
 
-const PORT = process.env.PORT || 3001
-
+const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-    res.send("hello")
+    res.send(process.env)
 })
 
 app.get('/posts', (req, res) => {
     res.send(postData.posts)
 })
 
+console.log(PORT);
 
 
 app.listen(PORT, () => console.log('server running...'))
