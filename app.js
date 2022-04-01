@@ -1,6 +1,9 @@
 const express = require('express');
-const app = express();
 const postData = require('./mock/posts.json')
+
+const app = express();
+
+const PORT = process.env.PORT || 3001
 
 
 app.get('/', (req, res) => {
@@ -13,4 +16,4 @@ app.get('/posts', (req, res) => {
 
 
 
-app.listen(3000, () => console.log('server running...'))
+app.listen(PORT, () => console.log('server running...'))
