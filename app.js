@@ -15,6 +15,7 @@ app.get('/posts', (req, res) => {
 })
 
 console.log(PORT);
+console.log(process.env.USERID);
 
 
 app.listen(PORT, () => console.log('server running...'))
